@@ -1,0 +1,35 @@
+{% extends 'wetube_base.html' %}
+
+{% block scripts %}
+
+<script>      
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+    </script>
+{%endblock%}
+
+{% block videos %}
+<div class="container meta-video-box row">
+    <h1>Search Results For '{{search_term}}':</h1>
+    <hr style="position:relative;z-index:-5">
+    <div id="search-display">
+        {% for i in range(videos|length) %}
+        <div class ='d-inline-flex' id="search-vids-box">
+            <div class="search-vid-result">
+                <a class="action" href="{{ url_for('wetube.videos', id=videos[i]['id']) }}" data-toggle="tooltip" title="{{videos[i]['tooltips']}}"><img src="{{videos[i]['thumbnails']}}" class="rounded"></a>
+            </div>
+            <div class="search-vids-text-box">
+                
+                <a class="action" href="{{ url_for('wetube.videos', id=videos[i]['id']) }}" style="text-decoration: None; color:black;"><div class='video-text-search' data-toggle="tooltip" title="{{videos[i]['tooltips']}}">{{videos[i]['titles']}}</div></a>
+                <p class="uploader"> Uploaded by: {{videos[i]['uploader']}}</p>
+                <p class="description"> {{videos[i]['descriptions']}}</p>
+            
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    
+</div>
+
+{% endblock %}

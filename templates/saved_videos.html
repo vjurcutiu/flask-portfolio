@@ -1,0 +1,14 @@
+{% extends 'wetube_base.html' %}
+
+{% block videos %}
+    <div class="container" id='my-vids-box'>
+        <h1 id='my-vids-h1'>My Saved Videos</h1>
+        <div class="row">
+    {% for i in range(len) %}
+        <div class="vids-box">
+            <a class="action" href="{{ url_for('wetube.videos', id=videos[i]['id']) }}" data-toggle="tooltip" title="{{videos[i]['tooltips']}}"><img src="{{videos[i]['thumbnail']}}" class="rounded"></a>
+        <p class='video-text' data-toggle="tooltip" title="{{videos[i]['tooltips']}}">{{videos[i]['title']}}</p>
+    </div>
+    {%endfor%}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'wetube_base.html' %}
+
+{% block videos %}
+
+<div class="container meta-video-box row">
+    <h1>Most Popular Right Now:</h1>
+    <hr style="position:relative;z-index:-5">
+        {% for i in range((0+page|int*12), (0+page|int*12+12)) %}
+        <div class="vids-box">
+            <a class="action" href="{{ url_for('wetube.videos', id=videos[i]['id']) }}" data-toggle="tooltip" title="{{videos[i]['tooltips']}}"><img src="{{videos[i]['thumbnails']}}" class="rounded"></a>
+            <a class="action" href="{{ url_for('wetube.videos', id=videos[i]['id']) }}" style="text-decoration: None; color:black;"><p class='video-text' data-toggle="tooltip" title="{{videos[i]['tooltips']}}">{{videos[i]['titles']}}</p></a>
+        </div>
+        {%endfor%}
+    <hr>
+        <div class="container d-inline-flex justify-content-center" id="pagination">
+            
+        {%if videos|length >12 %}
+            {%for n in range((videos|length/12)|int) %}
+                {%if page|int == n%}
+                <a class="action a-page d-flex justify-content-center" id="selected-page" href="{{ url_for('wetube.home', page=n) }}">{{(n+1)}}</a>
+                {%else%}
+                <a class="action a-page d-flex justify-content-center" href="{{ url_for('wetube.home', page=n) }}">{{(n+1)}}</a>
+                {%endif%}
+            {%endfor%}
+        {%endif%}
+        </div>
+</div>
+{% endblock %}

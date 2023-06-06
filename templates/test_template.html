@@ -1,0 +1,15 @@
+{% extends 'wetube_base.html' %}
+
+{% block videos %}
+
+<div class="container meta-video-box row">
+    
+        {% for i in range(12) %}
+        <div class="vids-box">
+            <a class="action" href=""><img src="{{ url_for('static', filename='/images/club-placeholder.jpg') }}" class="rounded"></a>
+        <p class='video-text'>placeholder</p>
+        </div>
+        {%endfor%}
+        
+</div>
+{% endblock %}

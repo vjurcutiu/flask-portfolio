@@ -1,0 +1,34 @@
+body {
+    background-color: #d9d9ec;    
+  }
+
+#main-box {
+    width: 40%;
+    background-color: #0D6EFD;
+    margin-left: 30%;
+    margin-top: 2.5%;
+    padding:2%;
+
+}
+
+.nb-row {
+  font: Product Sans;
+  font-size: 22px;
+  color: #d9d9ec;
+}
+
+button {
+  margin-top: 3%;
+}
+
+form {
+  display: inline;
+}
+
+#download {
+  margin-left:5%
+}
+
+#update {
+  margin-right: 5%
+}

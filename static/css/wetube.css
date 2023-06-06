@@ -1,0 +1,302 @@
+/* Base */
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: auto;
+}
+
+#search-bar {
+    width : 100%;    
+    min-height : 10%;
+    background-color: red;
+    position: absolute;
+}
+
+#side-bar {
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 10%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#search-input {
+    width:25%;
+    padding-top: .7%;
+}
+
+#home-button {
+    margin-top:80%
+}
+
+.button-box {
+    width: 100%;
+    background:black;
+    padding: 10%;
+}
+
+.button-box:hover {
+    background:rgba(0, 0, 0, 0.656)
+}
+
+.a-button-box, .a-button-box:link, .a-button-box:active, .a-button-box:visited, .a-button-box:hover {
+    text-decoration: none;
+    color: white;
+    font-family: Optima, sans-serif;
+}
+
+#logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 1%;
+    padding-left: 1%;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#logo-text {
+    display: inline;
+}
+
+.menu-icon {
+    display:none !important;
+}
+
+
+/* Home */
+.vids-box {
+    height: auto;
+    width: 23%;
+    margin-left: .2%;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+#videos {
+    padding-left: 15%;
+    margin-top: 7.5%;
+    height:100%;
+    width: 100%;
+}
+
+#pagination {
+    padding-bottom: 1.5%;
+}
+
+.a-page {
+    text-decoration: none;
+    width: 2.5%;
+    margin: 1%;
+    padding-top:.5%;
+    font-family: Optima, sans-serif;
+    color: black;
+}
+
+.a-page:hover{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.656);
+    color: white;
+}
+
+.a-page:active{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: white;
+}
+
+#selected-page{
+    background-color: rgba(0, 0, 0, 0.656);
+    color: white;
+}
+
+
+
+/* Videos */
+
+#giga-vid-box{
+    height:75%;
+}
+
+#video-player {    
+    width: 75%;
+    height: 75%;
+    }
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#rel-vids {
+    width: 25%;
+    height: 100%;
+}
+
+.video-text{
+    font-family: Optima, sans-serif; 
+    padding-top: 3%;
+    font-weight: bold;
+}
+
+.love-button {
+    color: red !important;
+}
+
+.love-button:hover {
+    color: white !important;
+}
+
+.meta-video-box {
+    width: 100%;
+    height: 100%;
+}
+
+#read-more-text {
+    display: none;
+}
+
+#rel-vids-text {
+    font-family: Optima, sans-serif;    
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* My videos */
+#my-vids-h1{
+    font-family: Optima, sans-serif; 
+}
+
+/* Search */
+
+#search-display {
+    width: 100%;
+    height: 100%;
+}
+
+#search-vids-box {
+    width:100%;
+    height:25%;
+}
+
+.search-vid-result {
+    width:25%;
+}
+
+.search-vids-text-box {
+    width:75%;
+    height:100%;
+    padding-left: 2%;
+}
+
+.video-text-search{
+    font-family: Optima, sans-serif; 
+    font-weight: bold;
+    margin-top: .5%;
+}
+
+#uploader, #description {
+    font-family: Optima, sans-serif; 
+}
+
+
+.flash { margin: 1em 0; padding: 1em; background: #cae6f6; border: 1px solid #377ba8; }
+
+
+
+@media only screen and (max-width: 1236px) {
+    .meta-video-box {
+        padding-top: 10%;
+        
+    }
+
+    #home-button {
+        margin-top: 120%;
+    }
+
+    #my-vids-box {
+        padding-top: 10%;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    #side-bar {
+        visibility: hidden;
+    }
+
+    .meta-video-box{
+        padding-top: 25%;
+    }
+
+    #my-vids-box {
+        padding-top: 25%;
+    }
+
+    .button-box {
+        color: black;   
+        margin-top: 45%;
+    }
+
+    #home-button {
+        margin-top:300%;
+    }
+
+    .menu-icon {
+        display: block !important;
+        visibility: visible !important;
+    }    
+
+    .vids-box{
+        width:100%;
+    }
+
+    #search-input {
+        width:75%;
+    }
+
+    iframe {
+    width: 100%;
+    height: 50%;
+    margin-top: 20%;
+    }
+
+    #rel-vids{
+        display:none;
+    }
+
+    #description-box {
+        display:none;
+    }
+
+    #giga-vid-box{
+        width:100%
+
+}
+
+    #video-player{
+        width:100%;
+    }
+
+    .description{
+        display:None;
+    }
+
+    #logo-text {
+        display:None;
+    }
+}
